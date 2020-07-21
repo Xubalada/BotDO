@@ -1,10 +1,13 @@
 import sys
-
 mySikuliPath = "C:\\Sikulix\\BotDO\\Bot.sikuli\\"
 if not mySikuliPath in sys.path: sys.path.append(mySikuliPath)
+
+import re
+from sikuli.Sikuli import *
+from java.awt import Robot
+
 from tela import Tela
-from viagem import Viagem
-from character import Personagem
+from personagem import Personagem
 
 class Menu:
     def __init__(self,prof = False):
@@ -29,6 +32,4 @@ class Menu:
 
 tela = new Tela()
 personagem = Personagem(debug = True, tela = tela)
-
 personagem.viagem.go_to(position = [-22,39])
-viagem.

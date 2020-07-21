@@ -1,5 +1,15 @@
-class CheckError:
+import sys
+mySikuliPath = "C:\\Sikulix\\BotDO\\Bot.sikuli\\"
+if not mySikuliPath in sys.path: sys.path.append(mySikuliPath)
 
+from sikuli.Sikuli import *
+from java.awt import Robot
+import re
+
+class CheckError:
+    def __init__(self):
+        print("Check Error")
+        
     def clean_chat(self):
         click(Pattern("images/check_error/1593972303685.png").targetOffset(-655,37))
         type("/clear")

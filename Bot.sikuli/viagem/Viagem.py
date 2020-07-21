@@ -1,6 +1,14 @@
+import sys
+mySikuliPath = "C:\\Sikulix\\BotDO\\Bot.sikuli\\"
+if not mySikuliPath in sys.path: sys.path.append(mySikuliPath)
+
 from sikuli.Sikuli import *
 from java.awt import Robot
 import re
+
+from check_error import CheckError
+
+
 ALL_ZAAPS =  {
     "Canto dos Papatudos" : [5,7],
     "Castelo de Amakna": [3,-5],
@@ -48,10 +56,7 @@ ALL_ZAAPS =  {
     "Vilarejo dos Diabretes": [-16,-24],
     "Vilarejo dos Kanigs": [0,-56],
     "Arco de Vili": [15,-20]
-}
-    
-
-
+} 
 
 
 class Viagem:

@@ -1,3 +1,11 @@
+import sys
+mySikuliPath = "C:\\Sikulix\\BotDO\\Bot.sikuli\\"
+if not mySikuliPath in sys.path: sys.path.append(mySikuliPath)
+
+import re
+from sikuli.Sikuli import *
+from java.awt import Robot
+
 class Tela:
     def __init__(self):
         self.action_screen = self.get_action_screen_position()
