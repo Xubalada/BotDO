@@ -2,7 +2,7 @@ from java.awt import Robot
 import time
 import re
 
-#locas
+#locass
 class Battle:
     def __init__(self, action_screen):
         self.action_screen = action_screen
